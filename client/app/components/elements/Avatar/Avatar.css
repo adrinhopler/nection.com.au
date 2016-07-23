@@ -1,0 +1,8 @@
+.avatar {
+  border-radius: 50%;
+  height: 100%;
+}
+
+.link {
+  display: inline-block;
+}

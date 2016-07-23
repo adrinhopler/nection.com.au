@@ -1,0 +1,118 @@
+= render :partial => 'layouts/head'
+
+%body
+
+  -# Render railsContext here before any react component gets rendered
+  = prepend_render_rails_context("")
+
+  %noscript
+    .noscript-padding
+      -# Noscript content will be positioned here
+
+  - if display_onboarding_topbar?
+    - props = onboarding_topbar_props
+    - unless props[:next_step] == :all_done
+      - react_component_cache(name: "onboarding_topbar", props: props) do
+        = react_component("OnboardingTopBar", props: props, prerender: true)
+
+  - if FeatureFlagHelper.feature_enabled?(:topbar_v1)
+    - props = topbar_props
+    - maps_key = MarketplaceHelper.google_maps_key(@current_community.id)
+    - key_param = maps_key ? "&key=#{maps_key}" : ""
+    = javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places#{key_param}"
+    = react_component("TopbarApp", props: props, prerender: true)
+  - # this will be an alternative old header
+  - # but for the sake of developing we include them both for a short while
+  = render partial: 'layouts/global_header', locals: header_props()
+
+  - if display_expiration_notice?
+    = render partial: "layouts/expiration_notice",
+        :locals => {external_plan_service_login_url: admin_plan_path}
+
+  - content_for(:page_content) do
+    %section.marketplace-lander
+      - if @big_cover_photo
+        .coverimage
+          %figure.marketplace-cover.fluidratio
+            .lander-content.marketplace-lander-content
+              = yield :title_header
+      - else
+        .coverimage
+          %figure.marketplace-cover-small.fluidratio
+          .coverimage-fade{:class => yield(:coverfade_class)}
+            %figure.marketplace-cover-small-fade.fluidratio
+        .title-container
+          .title-header-wrapper
+            .marketplace-title-header
+              = yield :title_header
+
+    %article.page-content
+      .wrapper
+        = render :partial => "layouts/notifications"
+        = yield
+        - if display_branding_info?
+          = render partial: "layouts/non_whitelabel_branding", locals: {link_to_sharetribe: "https://www.sharetribe.com/?utm_source=#{@current_community.ident}.sharetribe.com&utm_medium=referral&utm_campaign=nowl-footer"}
+  -#
+    This is not pretty, but works.
+    On homepage, we want to wrap the whole page content (search bar and the "real" content) to a form, so that
+    pressing send from either search bar of filter list will send all the form fields
+
+  - if params[:controller] == "homepage" && params[:action] == "index"
+    %form{method: "get", id: "homepage-filters"}
+      - params.except("action", "controller", "q", "lc", "ls", "view", "utf8", "boundingbox", "distance_max").each do |param, value|
+        - unless param.match(/^filter_option/) || param.match(/^checkbox_filter_option/) || param.match(/^nf_/) || param.match(/^price_/)
+          = hidden_field_tag param, value
+      = hidden_field_tag "view", @view_type
+      = content_for(:page_content)
+  - else
+    = content_for(:page_content)
+
+  -# Most of the JavaScript should be for performance reasons at the end of the body
+
+  -# load Facebook SDK for the whole page
+  = render :partial => "layouts/facebook_sdk"
+
+  -# Initialize global I18n variable and load translations there
+  :javascript
+    window.I18n = {};
+
+  = javascript_include_tag "i18n/#{I18n.locale}"
+
+  = javascript_include_tag 'application'
+
+  :javascript
+    window.ST.jsonTranslations = #{JSONTranslations.get(I18n.locale)}
+
+  - if @analytics_event
+    :javascript
+      report_analytics_event.apply(null, #{@analytics_event});
+  - if @gtm_datalayer
+    :javascript
+      if(window.ST != null && typeof window.ST.gtmPush === 'function') {
+        window.ST.gtmPush(#{@gtm_datalayer.to_json});
+      }
+
+  :javascript
+    $(function() {
+      if ('touchAction' in document.body.style) {
+        document.body.style.touchAction = 'manipulation';
+      } else {
+        window.FastClick.attach(document.body, { excludeNode: '^pac-'} );
+      }
+    });
+
+  -# Disable animations on tests
+  - if Rails.env.test?
+    :javascript
+      $(function() {
+        $.transit.enabled = false;
+      });
+
+  = content_for :extra_javascript
+
+  :javascript
+    $(document).ready(function() { initialize_defaults("#{I18n.locale}"); #{yield :javascript} });
+
+  = render :partial => "layouts/noscript"
+
+
