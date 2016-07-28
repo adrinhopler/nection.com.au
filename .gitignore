@@ -61,3 +61,6 @@ client/node_modules
 
 # Generated assets
 /public/webpack/*
+app/assets/javascripts/i18n/
+app/assets/webpack/
+public/webpack/
