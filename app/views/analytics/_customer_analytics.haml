@@ -8,7 +8,7 @@
 
   (function(){
     var communityGaKey = "#{google_analytics_key}";
-    var communityCookieDomain = "#{PublicSuffix.parse(request.host).domain}";
+    var communityCookieDomain = "";
 
     gaCustomer('create', communityGaKey, 'auto', {'legacyCookieDomain': communityCookieDomain, 'allowLinker': true});
     gaCustomer('send', 'pageview');
