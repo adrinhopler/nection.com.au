@@ -1,6 +1,6 @@
 development:
     adapter: mysql2
-    database: sharetribe_development
+    database: sharetribe_production
     encoding: utf8
     username: root
     password: root123
