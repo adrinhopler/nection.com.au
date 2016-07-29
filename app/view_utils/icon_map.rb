@@ -160,7 +160,7 @@ ICON_MAP = {
       "thumbnails" => "icon-th",
       "new_listing" => "icon-plus-sign-alt",
 
-      "search"  => "icon-search",
+      "search"  => "ss-search",
       "list" => "icon-reorder",
 
       "home" => "icon-home",
