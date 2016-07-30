@@ -11,12 +11,13 @@
 development:
   # Add local `development` environment configuration overrides here
 
-  mail_delivery_method: smtp
+  mail_delivery_method: sendmail
   smtp_email_address: "mail.nection.com.au"
-  smtp_email_port: 143
+#  smtp_email_address: "webcloud73.au.syrahost.com"
+  smtp_email_port: 465
   smtp_email_user_name: "nection@nection.com.au"
   smtp_email_password: "Password123"
-  smtp_email_domain: "54.200.123.72"
+  smtp_email_domain: "localhost"
 
 test:
   # Add local `test` environment configuration overrides here
@@ -29,7 +30,8 @@ production:
 
   mail_delivery_method: smtp
   smtp_email_address: "mail.nection.com.au"
-  smtp_email_port: 143
+#  smtp_email_address: "webcloud73.au.syrahost.com"
+  smtp_email_port: 465
   smtp_email_user_name: "nection@nection.com.au"
   smtp_email_password: "Password123"
-  smtp_email_domain: "54.200.123.72"
+  smtp_email_domain: "localhost"
