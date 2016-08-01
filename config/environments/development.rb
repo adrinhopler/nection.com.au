@@ -53,44 +53,25 @@ Kassi::Application.configure do
 
   # Don't care if the mailer can't send
 
-  config.action_mailer.smtp_settings = {
-    address: 'smtp.mandrillapp.com',
-    port: 25,
-    domain: 'ca.la',
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: 'Cala',
-    password: 'toCnasO95A0IZBZ0_wajrg'
-  }
-
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
 
-  # if APP_CONFIG.mail_delivery_method == "sendmail"
-  #   ActionMailer::Base.delivery_method = :sendmail
-  # elsif APP_CONFIG.mail_delivery_method == "smtp"
-  #   # Enable sending mail from localhost
-  #   ActionMailer::Base.delivery_method = :smtp
-  #
-  #   ActionMailer::Base.smtp_settings = {
-  #     :address              => "smtp.mandrillapp.com",
-  #     :port                 => "25",
-  #     :domain               => "ca.la",
-  #     :user_name            => "Cala",
-  #     :password             => "toCnasO95A0IZBZ0_wajrg",
-  #     :authentication       => plain,
-  #     :enable_starttls_auto => true
-  #     # :address              => APP_CONFIG.smtp_email_address,
-  #     # :port                 => APP_CONFIG.smtp_email_port,
-  #     # :domain               => APP_CONFIG.smtp_email_domain || 'localhost',
-  #     # :user_name            => APP_CONFIG.smtp_email_user_name,
-  #     # :password             => APP_CONFIG.smtp_email_password,
-  #     # :authentication       => 'plain',
-  #     # :enable_starttls_auto => true
-  #   }
-  # end
+  if APP_CONFIG.mail_delivery_method == "sendmail"
+    ActionMailer::Base.delivery_method = :sendmail
+  elsif APP_CONFIG.mail_delivery_method == "smtp"
+
+    ActionMailer::Base.delivery_method = :smtp
+
+    ActionMailer::Base.smtp_settings = {
+        :address              => APP_CONFIG.smtp_email_address,
+        :port                 => APP_CONFIG.smtp_email_port,
+        :domain               => APP_CONFIG.smtp_email_domain || 'localhost',
+        :authentication       => 'plain',
+        :enable_starttls_auto => true,
+        :user_name            => APP_CONFIG.smtp_email_user_name,
+        :password             => APP_CONFIG.smtp_email_password
+      }
+  end
 
 
   # Expands the lines which load the assets
