@@ -4,7 +4,7 @@ default: &default_settings
   # If you are running on localhost, you can write here "lvh.me:3000" (which redirects to localhost port 3000)
   # The community subdomains will be added to this top domain.
   # NOTE: Do not include http(s) here, or subdomains, just the top level domain, like "sharetribe.com" for example
-  domain: "lvh.me:3000"
+  domain: "localhost:3000"
 
   # If you want to make logins work across different subdomains you should put here the domain where you are running Sharetribe.
   # practically in most cases the same value as in "domain:"
@@ -133,8 +133,8 @@ default: &default_settings
 
   # Facebook Connect
   # If you want to use Facebook connect, enter the credentials here
-  fb_connect_id:
-  fb_connect_secret:
+  fb_connect_id: 786956968107500
+  fb_connect_secret: 62e01e76021a696ab8d8bba999ee156f
 
   # You can use Airbrake to track errors if you want.
   # You need to register an account and get an API key from airbrake.io
@@ -325,7 +325,7 @@ default: &default_settings
 
   # Default Google Maps API key for communities that don't specify one
   # Default is not to use Google Maps API key
-  google_maps_key:
+  google_maps_key: AIzaSyBwXooFJ0exHCofpHvgavy6xVVc3uELhfE
 
   # Path or URL for landing page assets.
   #
