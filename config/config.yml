@@ -14,9 +14,12 @@ development:
   mail_delivery_method: smtp
   smtp_email_address: "smtp.mandrillapp.com"
   smtp_email_port: 25
-  smtp_email_domain: "nection.com.au"
+  smtp_email_domain: "/opt/lampp/var/mysql/mysql.socknection.com.au"
   smtp_email_user_name: "Nection"
   smtp_email_password: "T_d7EqHdlG_K3fOdn7HOfQ"
+
+  traity_api_key: '1GvjKtZHRSqkOMMXEDIAXQ'
+  traity_secret_key: 'rzZ6OuM1WKYUtgACNsPZc3jS8PMpAZ1XSMOQ'
 
 test:
   # Add local `test` environment configuration overrides here
@@ -33,3 +36,7 @@ production:
   smtp_email_domain: "nection.com.au"
   smtp_email_user_name: "Nection"
   smtp_email_password: "T_d7EqHdlG_K3fOdn7HOfQ"
+
+  traity_api_key: '1GvjKtZHRSqkOMMXEDIAXQ'
+  traity_secret_key: 'rzZ6OuM1WKYUtgACNsPZc3jS8PMpAZ1XSMOQ'
+

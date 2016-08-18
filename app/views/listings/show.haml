@@ -154,6 +154,9 @@
                   .content
                     = t(".contact")
 
+
+        %div{ 'data-traity-widget': 'reputation', 'data-traity-widget-version': '3', 'data-traity-app-user-id': 'CURRENT_USER_ID', 'data-traity-current-user-name': @listing.author.name(@current_community), 'data-traity-current-user-email': '', 'data-traity-signature': widget_signature(APP_CONFIG.traity_api_key, APP_CONFIG.traity_secret_key, 'CURRENT_USER_ID') }
+
     - if @current_community.testimonials_in_use && received_testimonials.size > 0
       .row-with-divider.listing-author-activity
         .col-12

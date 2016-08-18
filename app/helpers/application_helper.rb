@@ -1,4 +1,7 @@
 # encoding: utf-8
+
+require 'jwt'
+
 module ApplicationHelper
 
   # Removes whitespaces from HAML expressions
@@ -700,5 +703,17 @@ module ApplicationHelper
     else
       content_for :extra_javascript do js end
     end
+  end
+
+  #
+  # Traity.com widget
+  #
+  def widget_signature(key, secret, current_user_id, options = {})
+    payload = {
+      time: Time.now.to_i,
+      current_user_id: current_user_id,
+    }.merge(options)
+    signature = {key: key, payload: JWT.encode(payload, secret, 'HS256')}
+    JWT.encode(signature, nil, false)
   end
 end
