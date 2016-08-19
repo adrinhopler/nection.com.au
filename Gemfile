@@ -181,3 +181,5 @@ gem 'color', '~> 1.8'
 
 
 gem 'daemons'
+
+gem 'slim-rails'
