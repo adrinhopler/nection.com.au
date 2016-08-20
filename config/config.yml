@@ -21,6 +21,9 @@ development:
   traity_api_key: '1GvjKtZHRSqkOMMXEDIAXQ'
   traity_secret_key: 'rzZ6OuM1WKYUtgACNsPZc3jS8PMpAZ1XSMOQ'
 
+  # for static landing page (example data)
+  clp_static_enabled: true
+
 test:
   # Add local `test` environment configuration overrides here
 
@@ -40,3 +43,5 @@ production:
   traity_api_key: '1GvjKtZHRSqkOMMXEDIAXQ'
   traity_secret_key: 'rzZ6OuM1WKYUtgACNsPZc3jS8PMpAZ1XSMOQ'
 
+  # for static landing page (example data)
+  clp_static_enabled: true

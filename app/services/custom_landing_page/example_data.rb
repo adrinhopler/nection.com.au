@@ -27,19 +27,64 @@ module CustomLandingPage
       "id": "hero",
       "kind": "hero",
       "variation": {"type": "marketplace_data", "id": "search_type"},
-      "title": {"type": "marketplace_data", "id": "slogan"},
-      "subtitle": {"type": "marketplace_data", "id": "description"},
+      "title": { "value": "Get help from the accounting business partner you need" },
+      "subtitle": { "value": "Get help from the right accountant" },
       "background_image": {"type": "assets", "id": "default_hero_background"},
       "background_image_variation": "dark",
       "search_button": {"type": "translation", "id": "search_button"},
       "search_path": {"type": "path", "id": "search"},
-      "search_placeholder": {"type": "marketplace_data", "id": "search_placeholder"},
+      "search_placeholder": "What do you need help with?",
       "signup_path": {"type": "path", "id": "signup"},
       "signup_button": {"type": "translation", "id": "signup_button"},
       "search_button_color": {"type": "marketplace_data", "id": "primary_color"},
       "search_button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
       "signup_button_color": {"type": "marketplace_data", "id": "primary_color"},
       "signup_button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"}
+    },
+    {
+      "id": "how_nection_works",
+      "kind": "info",
+      "variation": "multi_column",
+      "title": "How Nection works",
+      "paragraph": "Matching your needs in three easy steps",
+      "columns": [
+        {
+          "title": "1",
+          "paragraph": "Find the perfect accountant easily compare by skills, work history and rating"
+        },
+        {
+          "title": "2",
+          "paragraph": "Connect and make a booking"
+        },
+        {
+          "title": "3",
+          "paragraph": "Get the job done"
+        }
+      ]
+    },
+    {
+      "id": "why_join",
+      "kind": "info",
+      "variation": "multi_column",
+      "title": "Why join",
+      "paragraph": "The market place that connects businesses and individuals to accountants and bookkeepers",
+      "button_color": {"type": "marketplace_data", "id": "primary_color"},
+      "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
+      "icon_color": {"type": "marketplace_data", "id": "primary_color"},
+      "columns": [
+        {
+          "title": "For businesses and individuals",
+          "paragraph": "Find and book the best accountant or bookkeeper for your needs",
+          "button_title": "Browse accountants and bookkeepers",
+          "button_path": {"value": "https://www.sharetribe.com"}
+        },
+        {
+          "title": "For accountants and bookkeepers",
+          "paragraph": "Promote your services to thousands of business in your area",
+          "button_title": "Become a member and list your business",
+          "button_path": {"value": "https://www.sharetribe.com"}
+        }
+      ]
     },
     {
       "id": "video",
@@ -127,22 +172,6 @@ module CustomLandingPage
       ]
     },
     {
-      "id": "two_column_info_without_icons_and_buttons",
-      "kind": "info",
-      "variation": "multi_column",
-      "title": "Two column info section without icons and buttons",
-      "columns": [
-        {
-          "title": "Column 1",
-          "paragraph": ["Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.","Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel."]
-        },
-        {
-          "title": "Column 2",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel."
-        }
-      ]
-    },
-    {
       "id": "three_column_info_with_icons_and_buttons",
       "kind": "info",
       "variation": "multi_column",
@@ -175,26 +204,6 @@ module CustomLandingPage
       ]
     },
     {
-      "id": "three_column_info_without_icons_and_buttons",
-      "kind": "info",
-      "variation": "multi_column",
-      "title": "Three column info without icons and buttons",
-      "columns": [
-        {
-          "title": "Column 1",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel."
-        },
-        {
-          "title": "Column 2",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel."
-        },
-        {
-          "title": "Column 3",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel."
-        }
-      ]
-    },
-    {
         "id": "categories",
         "kind": "categories",
         "title": "Categories section",
@@ -222,11 +231,11 @@ module CustomLandingPage
     {
         "id": "listings",
         "kind": "listings",
-        "title": "Featured listings section",
-        "paragraph": "PLEASE NOTE: This section is NOT ENABLED by default. To enable this section, replace listing IDs with real IDs and add the section to the 'composition'. This section contains 3 featured listings",
+        "title": "Featured accountants and bookkeepers",
+        "_paragraph": "PLEASE NOTE: This section is NOT ENABLED by default. To enable this section, replace listing IDs with real IDs and add the section to the 'composition'. This section contains 3 featured listings",
         "button_color": {"type": "marketplace_data", "id": "primary_color"},
         "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
-        "button_title": "Browse all listings",
+        "button_title": "Browse all",
         "button_path": {"type": "path", "id": "search"},
         "price_color": {"type": "marketplace_data", "id": "primary_color"},
         "no_listing_image_background_color": {"type": "marketplace_data", "id": "primary_color"},
@@ -234,13 +243,13 @@ module CustomLandingPage
         "author_name_color_hover": {"type": "marketplace_data", "id": "primary_color"},
         "listings": [
             {
-                "listing": { "type": "listing", "id": 99999 }
+                "listing": { "type": "listing", "id": 273560, "listing_path": "/en/listings/273560-kc-tax-solutions-personalised-tax-service-at-best-price" }
             },
             {
-                "listing": { "type": "listing", "id": 99999 }
+                "listing": { "type": "listing", "id": 273560, "listing_path": "/en/listings/273560-kc-tax-solutions-personalised-tax-service-at-best-price" }
             },
             {
-                "listing": { "type": "listing", "id": 99999 }
+                "listing": { "type": "listing", "id": 273560, "listing_path": "/en/listings/273560-kc-tax-solutions-personalised-tax-service-at-best-price" }
             }
         ]
     },
@@ -272,17 +281,9 @@ module CustomLandingPage
 
   "composition": [
     { "section": {"type": "sections", "id": "hero"}},
-    { "section": {"type": "sections", "id": "single_info_without_background_and_cta"}},
-    { "section": {"type": "sections", "id": "single_info_without_cta"}},
-    { "section": {"type": "sections", "id": "single_info_with_cta"}},
-    { "section": {"type": "sections", "id": "single_info_with_background_and_cta"}},
-    { "section": {"type": "sections", "id": "single_info_with_background_color_and_cta"}},
-    { "section": {"type": "sections", "id": "two_column_info_with_icons_and_buttons"}},
-    { "section": {"type": "sections", "id": "two_column_info_without_icons_and_buttons"}},
-    { "section": {"type": "sections", "id": "three_column_info_with_icons_and_buttons"}},
-    { "section": {"type": "sections", "id": "three_column_info_without_icons_and_buttons"}},
-    { "section": {"type": "sections", "id": "video"}},
-    { "section": {"type": "sections", "id": "footer"}}
+    { "section": {"type": "sections", "id": "how_nection_works"}},
+    { "section": {"type": "sections", "id": "listings"}},
+    { "section": {"type": "sections", "id": "why_join"}}
   ],
 
   "assets": [
