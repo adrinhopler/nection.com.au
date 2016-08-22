@@ -204,27 +204,43 @@ module CustomLandingPage
       ]
     },
     {
-        "id": "categories",
-        "kind": "categories",
-        "title": "Categories section",
-        "paragraph": "PLEASE NOTE: This section is NOT ENABLED by default. To enable this section, replace category IDs with real IDs and add the section to the 'composition'. Categories section can contain 3 to 7 featured categories. Each category should have a background image.",
-        "button_color": {"type": "marketplace_data", "id": "primary_color"},
-        "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
-        "button_title": "All categories",
-        "button_path": {"type": "path", "id": "all_categories"},
+        "id": "boxes",
+        "kind": "boxes",
+        "title": "We cater for all your accounting needs",
+        "paragraph": "Check out some of the services provided",
+        "_button_color": {"type": "marketplace_data", "id": "primary_color"},
+        "_button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
+        "_button_title": "All categories",
+        "_button_path": {"type": "path", "id": "all_categories"},
         "category_color_hover": {"type": "marketplace_data", "id": "primary_color"},
         "categories": [
             {
-                "category": { "type": "category", "id": 99999 },
-                "background_image": {"type": "assets", "id": "default_hero_background"}
+                "category": { "title": "Income tax", "path": "/s?category=services-offered-directory&view=grid&q=&checkbox_filter_option_91806=91806&nf_min_26635=0&nf_max_26635=9999" },
+                "background_color": "gray"
             },
             {
-                "category": { "type": "category", "id": 99999 },
-                "background_image": {"type": "assets", "id": "default_hero_background"}
+                "category": { "title": "GST", "path": "/s?category=services-offered-directory&view=grid&q=&checkbox_filter_option_93982=93982&nf_min_26635=0&nf_max_26635=9999" },
+                "background_color": "gray"
             },
             {
-                "category": { "type": "category", "id": 99999 },
-                "background_image": {"type": "assets", "id": "default_hero_background"}
+                "category": { "title": "Insolvency", "path": "/s?category=services-offered-directory&view=grid&q=&checkbox_filter_option_91811=91811&nf_min_26635=0&nf_max_26635=9999" },
+                "background_color": "gray"
+            },
+            {
+                "category": { "title": "Business advisory", "path": "/s?category=services-offered-directory&view=grid&q=&checkbox_filter_option_91812=91812&nf_min_26635=0&nf_max_26635=9999" },
+                "background_color": "gray"
+            },
+            {
+                "category": { "title": "Audit", "path": "/s?category=services-offered-directory&view=grid&q=&checkbox_filter_option_93983=93983&nf_min_26635=0&nf_max_26635=9999" },
+                "background_color": "gray"
+            },
+            {
+                "category": { "title": "Bookkeeping", "path": "/s?category=services-offered-directory&view=grid&q=&checkbox_filter_option_92352=92352&nf_min_26635=0&nf_max_26635=9999" },
+                "background_color": "gray"
+            },
+            {
+                "category": { "title": "Corporate Finance", "path": "/s?category=services-offered-directory&view=grid&q=&checkbox_filter_option_93985=93985&nf_min_26635=0&nf_max_26635=9999" },
+                "background_color": "gray"
             }
         ]
     },
@@ -283,7 +299,8 @@ module CustomLandingPage
     { "section": {"type": "sections", "id": "hero"}},
     { "section": {"type": "sections", "id": "how_nection_works"}},
     { "section": {"type": "sections", "id": "listings"}},
-    { "section": {"type": "sections", "id": "why_join"}}
+    { "section": {"type": "sections", "id": "why_join"}},
+    { "section": {"type": "sections", "id": "boxes"}}
   ],
 
   "assets": [

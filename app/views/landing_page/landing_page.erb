@@ -37,6 +37,8 @@
       <%= render partial: "info", locals: {section_id: section_id, s: s, second_wo_background: second_wo_background } %>
     <% when "categories" %>
       <%= render partial: "categories", locals: {section_id: section_id, s: s} %>
+    <% when "boxes" %>
+      <%= render partial: "boxes", locals: {section_id: section_id, s: s} %>
     <% when "listings" %>
       <%= render partial: "listings", locals: {section_id: section_id, s: s} %>
     <% when "video" %>
