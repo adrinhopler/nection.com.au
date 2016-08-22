@@ -32,7 +32,7 @@ module CustomLandingPage
       "background_image": {"type": "assets", "id": "default_hero_background"},
       "background_image_variation": "dark",
       "search_button": {"type": "translation", "id": "search_button"},
-      "search_path": {"type": "path", "id": "search"},
+      "search_path": { "value": "/s?category=services-offered-directory&nf_max_26635=9999&nf_min_26635=0&q=&view=grid" },
       "search_placeholder": "What do you need help with?",
       "signup_path": {"type": "path", "id": "signup"},
       "signup_button": {"type": "translation", "id": "signup_button"},
@@ -76,13 +76,13 @@ module CustomLandingPage
           "title": "For businesses and individuals",
           "paragraph": "Find and book the best accountant or bookkeeper for your needs",
           "button_title": "Browse accountants and bookkeepers",
-          "button_path": {"value": "https://www.sharetribe.com"}
+          "button_path": {"value": "/s?category=services-offered-directory&view=grid&q=&nf_min_26635=0&nf_max_26635=9999"}
         },
         {
           "title": "For accountants and bookkeepers",
           "paragraph": "Promote your services to thousands of business in your area",
           "button_title": "Become a member and list your business",
-          "button_path": {"value": "https://www.sharetribe.com"}
+          "button_path": {"value": "/en/signup"}
         }
       ]
     },
@@ -243,13 +243,13 @@ module CustomLandingPage
         "author_name_color_hover": {"type": "marketplace_data", "id": "primary_color"},
         "listings": [
             {
-                "listing": { "type": "listing", "id": 273560, "listing_path": "/en/listings/273560-kc-tax-solutions-personalised-tax-service-at-best-price" }
+                "listing": { "type": "listing", "id": 256989, "listing_path": "/en/listings/256989-cfo-direct" }
             },
             {
-                "listing": { "type": "listing", "id": 273560, "listing_path": "/en/listings/273560-kc-tax-solutions-personalised-tax-service-at-best-price" }
+                "listing": { "type": "listing", "id": 256989, "listing_path": "/en/listings/256989-cfo-direct" }
             },
             {
-                "listing": { "type": "listing", "id": 273560, "listing_path": "/en/listings/273560-kc-tax-solutions-personalised-tax-service-at-best-price" }
+                "listing": { "type": "listing", "id": 256989, "listing_path": "/en/listings/256989-cfo-direct" }
             }
         ]
     },
