@@ -64,7 +64,7 @@
               = render :partial => "testimonials", :locals => {:received_testimonials => received_testimonials, :limit => 3}
 
     .row
-      %div{ 'data-traity-widget': 'review', 'data-traity-app-user-id': @person.id, 'data-traity-signature': widget_signature(APP_CONFIG.traity_api_key, APP_CONFIG.traity_secret_key, @person.id, verified: [:email]) }
+      %div{ 'data-traity-widget': 'reviews', 'data-traity-app-user-id': @person.id, 'data-traity-signature': widget_signature(APP_CONFIG.traity_api_key, APP_CONFIG.traity_secret_key, @person.id) }
 
 
   .col-4
@@ -77,7 +77,7 @@
         = render :partial => "profile_action_buttons"
 
     .row
-      %div{ 'data-traity-widget': 'reputation', 'data-traity-widget-version': '3', 'data-traity-app-user-id': @person.id, 'data-traity-current-user-name': @person.name(@current_community), 'data-traity-current-user-email': @person.email, 'data-traity-signature': widget_signature(APP_CONFIG.traity_api_key, APP_CONFIG.traity_secret_key, @person.id) }
+      %div{ 'data-traity-widget': 'reputation', 'data-traity-widget-version': '3', 'data-traity-app-user-id': @person.id, 'data-traity-current-user-name': @person.name(@current_community), 'data-traity-current-user-email': @person.emails.first.try(:address), 'data-traity-signature': widget_signature(APP_CONFIG.traity_api_key, APP_CONFIG.traity_secret_key, @person.id) }
 
 - content_for :extra_javascript do
   :javascript
