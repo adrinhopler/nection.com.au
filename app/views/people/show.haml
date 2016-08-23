@@ -72,6 +72,9 @@
       .profile-action-buttons-desktop
         = render :partial => "profile_action_buttons"
 
+    .row
+      %div{ 'data-traity-widget': 'reputation', 'data-traity-widget-version': '3', 'data-traity-app-user-id': @person.id, 'data-traity-current-user-name': @person.name(@current_community), 'data-traity-current-user-email': @person.email, 'data-traity-signature': widget_signature(APP_CONFIG.traity_api_key, APP_CONFIG.traity_secret_key, @person.id) }
+
 - content_for :extra_javascript do
   :javascript
     window.ST.initializeFollowButtons();
