@@ -63,6 +63,10 @@
             #profile-testimonials-list
               = render :partial => "testimonials", :locals => {:received_testimonials => received_testimonials, :limit => 3}
 
+    .row
+      %div{ 'data-traity-widget': 'review', 'data-traity-app-user-id': @person.id, 'data-traity-signature': widget_signature(APP_CONFIG.traity_api_key, APP_CONFIG.traity_secret_key, @person.id, verified: [:email]) }
+
+
   .col-4
     .row
       .people-image
