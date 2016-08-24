@@ -67,6 +67,8 @@ Kassi::Application.routes.draw do
     CustomLandingPage::LandingPageStore.enabled?(request.env[:current_marketplace]&.id)
   }
 
+  get '/landing_page/random_listings', to: 'homepage#random_listings'
+
   # Conditional routes for search view if landing page is enabled
   get '/:locale/s' => 'homepage#index', as: :search_with_locale, constraints: ->(request) {
     locale_matcher_anchored.match(request.params["locale"]) &&

@@ -107,7 +107,6 @@ class LandingPageController < ActionController::Metal
     end
   end
 
-
   private
 
   # Override basic instrumentation and provide additional info for

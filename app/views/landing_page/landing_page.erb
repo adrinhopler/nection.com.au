@@ -135,6 +135,7 @@
     <%= stylesheet_link_tag asset_path('app-bundle', type: :stylesheet, host: asset_host) %>
     <%= javascript_include_tag asset_path('vendor-bundle', type: :javascript, host: asset_host) %>
     <%= javascript_include_tag asset_path('app-bundle', type: :javascript, host: asset_host) %>
+    <%= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js' %>
 
     <%= render partial: "topbar",
         locals: {props: topbar[:props],
@@ -142,6 +143,8 @@
                  props_endpoint: topbar[:props_endpoint],
                  container_id: "topbar-placeholder"} %>
   <% end %>
+
+  <%= yield :javascript_after %>
 
 </body>
 </html>

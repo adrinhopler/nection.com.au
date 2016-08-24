@@ -123,6 +123,12 @@ class HomepageController < ApplicationController
     end
   end
 
+
+  def random_listings
+    render layout: false
+  end
+
+
   def self.selected_view_type(view_param, community_default, app_default, all_types)
     if view_param.present? and all_types.include?(view_param)
       view_param

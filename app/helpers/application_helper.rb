@@ -716,4 +716,46 @@ module ApplicationHelper
     signature = {key: key, payload: JWT.encode(payload, secret, 'HS256')}
     JWT.encode(signature, nil, false)
   end
+
+  def landing_page_listing listing
+    landing_page_locale = @current_community.default_locale
+    locale_param = landing_page_locale
+
+    # Check that image is processed and downloaded before using it
+    listing_image = Maybe(listing.listing_images.first)
+                    .select { |img| img.image_ready? }
+                    .map { |img| img.image.url(:big) }
+                    .or_else(nil)
+
+    author = listing.author
+
+    # Check that author avatar is processed
+    author_avatar =
+      if author.image.present? && !author.image.processing?
+        author.image.url(:thumb)
+      end
+
+    {
+      "title" => listing.title,
+      "price" => Maybe(listing.price).format(no_cents_if_whole: true).or_else(nil),
+      "price_unit" => Maybe(listing.unit_type).map { |unit_type| ListingViewUtils.translate_unit(unit_type, listing.unit_tr_key, locale: landing_page_locale) }.or_else(nil),
+      "shape_name" => I18n.t(listing.shape_name_tr_key, locale: landing_page_locale),
+      "author_name" => PersonViewUtils.display_name(
+        first_name: author.given_name,
+        last_name: author.family_name,
+        username: author.username,
+        name_display_type: nil,
+        is_organization: nil,
+        organization_name: nil,
+        is_deleted: author.deleted?,
+        deleted_user_text: I18n.translate("common.removed_user")
+      ),
+      "author_avatar" => author_avatar,
+      "listing_image" => listing_image,
+      "listing_path" => listing_path(listing.id, locale: locale_param),
+      "author_path" => person_path(author.username, locale: locale_param)
+    }
+  end
+
+
 end

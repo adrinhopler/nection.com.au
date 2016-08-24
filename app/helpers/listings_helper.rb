@@ -135,5 +135,4 @@ module ListingsHelper
   def action_button_label(listing)
     t(listing.action_button_tr_key)
   end
-
 end
