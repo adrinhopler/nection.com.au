@@ -256,7 +256,7 @@ module CustomLandingPage
         "button_color": {"type": "marketplace_data", "id": "primary_color"},
         "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
         "button_title": "Browse all",
-        "button_path": {"type": "path", "id": "search"},
+        "button_path": {"value": "/s?category=services-offered-directory"},
         "price_color": {"type": "marketplace_data", "id": "primary_color"},
         "no_listing_image_background_color": {"type": "marketplace_data", "id": "primary_color"},
         "no_listing_image_text": {"type": "translation", "id": "no_listing_image"},
