@@ -125,6 +125,7 @@ class HomepageController < ApplicationController
 
 
   def random_listings
+    @listings = Listing.where(category_id: 154957).all
     render layout: false
   end
 
