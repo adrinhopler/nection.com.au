@@ -15,7 +15,7 @@ module TopbarHelper
         title: I18n.t("header.home")
       },
       {
-        link: "/#info__how_nection_works__1",
+        link: "/#info__how_nection_works__2",
         title: I18n.t("header.about")
       },
       {

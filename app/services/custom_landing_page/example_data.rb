@@ -39,7 +39,11 @@ module CustomLandingPage
       "search_button_color": {"type": "marketplace_data", "id": "primary_color"},
       "search_button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
       "signup_button_color": {"type": "marketplace_data", "id": "primary_color"},
-      "signup_button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"}
+      "signup_button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
+      "button_color": {"type": "marketplace_data", "id": "primary_color"},
+      "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
+      "button_title": "Browse all",
+      "button_path": { "value": "/s?category=services-offered-directory" }
     },
     {
       "id": "how_nection_works",
@@ -297,10 +301,10 @@ module CustomLandingPage
 
   "composition": [
     { "section": {"type": "sections", "id": "hero"}},
+    { "section": {"type": "sections", "id": "boxes"}},
     { "section": {"type": "sections", "id": "how_nection_works"}},
     { "section": {"type": "sections", "id": "listings"}},
-    { "section": {"type": "sections", "id": "why_join"}},
-    { "section": {"type": "sections", "id": "boxes"}}
+    { "section": {"type": "sections", "id": "why_join"}}
   ],
 
   "assets": [

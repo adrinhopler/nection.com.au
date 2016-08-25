@@ -18,6 +18,16 @@
   .hero__signup-button:focus {
     background-color: rgb(<%= s["search_button_color_hover"]["value"].join(",") %>);
   }
+  <% if s["button_color"] && s["button_color_hover"] %>
+    .<%= section_id %>__listings__button--ghost {
+      color: #fff;
+      border-color: rgb(<%= s["button_color"]["value"].join(",") %>);
+      background-color: rgb(<%= s["button_color_hover"]["value"].join(",") %>);
+      margin-top: 60px;
+      font-weight: normal;
+    }
+  <% end %>
+
 <% end %>
 
 <section id="<%= section_id %>" class="<%= section_style_class %>">
@@ -72,6 +82,10 @@
 
         <a class="hero__signup-button" href="<%= s["signup_path"]["value"] %>"><%= s["signup_button"]["value"] %></a>
 
+      <% end %>
+
+      <% if s["button_title"] %>
+        <a class="<%= section_id%>__listings__button--ghost listings__button--ghost" href="<%= s['button_path']['value'] %>"><%= s["button_title"]%></a>
       <% end %>
     </div>
   </div>
