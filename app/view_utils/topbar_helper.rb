@@ -15,11 +15,11 @@ module TopbarHelper
         title: I18n.t("header.home")
       },
       {
-        link: paths.about_infos_path,
+        link: "/#info__how_nection_works__1",
         title: I18n.t("header.about")
       },
       {
-        link: paths.new_user_feedback_path,
+        link: "mailto:nection@nection.com.au",
         title: I18n.t("header.contact_us"),
       }
     ]
