@@ -149,6 +149,16 @@ group :development do
   gem 'better_errors', "~> 2.1.1"
   gem 'web-console', '~> 2.0'
   gem 'awesome_print', '~> 1.6.1'
+
+  # Deploy with Capistrano
+  gem 'capistrano', '~> 3.4'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
+  gem 'capistrano3-nginx_unicorn', github: 'jesson/capistrano3-nginx_unicorn'
+  gem 'capistrano-rails-collection'
+  gem 'capistrano-upload-config'
+  gem 'capistrano-touch-linked-files'
 end
 
 group :test do
@@ -183,3 +193,5 @@ gem 'color', '~> 1.8'
 gem 'daemons'
 
 gem 'slim-rails'
+
+gem 'unicorn'
