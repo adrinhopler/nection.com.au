@@ -151,7 +151,7 @@ group :development do
   gem 'awesome_print', '~> 1.6.1'
 
   # Deploy with Capistrano
-  gem 'capistrano', '~> 3.4'
+  gem 'capistrano', '3.4'
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
   gem 'capistrano-bundler'

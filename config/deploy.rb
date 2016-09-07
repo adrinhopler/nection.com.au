@@ -9,13 +9,12 @@ set :nginx_port, 80
 set :keep_releases, 2
 
 set :linked_dirs, fetch(:linked_dirs, []) + %w(log tmp/pids public/system)
-set :linked_files, fetch(:linked_files, []) + %w{config/database.yml config/secrets.yml config/application.yml config/proxy_passwords}
-set :config_files, %w(config/database.yml config/secrets.yml config/application.yml)
+set :linked_files, fetch(:linked_files, []) + %w{config/database.yml}
+set :config_files, %w(config/database.yml)
 before 'deploy:check:linked_files', 'config:push'
 before 'deploy:check:linked_files', 'linked_files:touch'
 
 set :pty, true
-
 set :ssh_options, {
   forward_agent: true,
   auth_methods: ["publickey"],
