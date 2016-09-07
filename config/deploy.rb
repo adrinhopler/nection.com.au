@@ -21,6 +21,9 @@ set :ssh_options, {
   keys: ["../download/sharetribe-new-64.pem"]
 }
 
+# nvm
+set :nvm_node, 'v6.1.0'
+
 namespace :deploy do
   desc "tail logs"
   task :tail_logs do

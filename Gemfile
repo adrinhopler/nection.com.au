@@ -159,6 +159,8 @@ group :development do
   gem 'capistrano-rails-collection'
   gem 'capistrano-upload-config'
   gem 'capistrano-touch-linked-files'
+  gem 'capistrano-npm'
+  gem 'capistrano-nvm', require: false
 end
 
 group :test do

@@ -11,6 +11,8 @@ require 'capistrano/bundler'
 require 'capistrano3/nginx_unicorn'
 require 'capistrano/upload-config'
 require 'capistrano/touch-linked-files'
+require 'capistrano/nvm'
+require 'capistrano/npm'
 
 # Includes tasks from other gems included in your Gemfile
 #
