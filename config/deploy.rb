@@ -68,7 +68,7 @@ desc "Run rake task on server"
 task :sake do
  on roles(:app), in: :sequence, wait: 5 do
    within current_path do
-     as :rails do
+     as fetch(:user) do
        with rails_env: :production do
          execute :rake, ENV['task'], "RAILS_ENV=production"
        end
