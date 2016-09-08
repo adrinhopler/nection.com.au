@@ -1,7 +1,7 @@
 set :rails_env, :production
 set :stage, :production
 set :application, "sharetribe"
-set :nginx_server_name, "nection.com.au"
+set :nginx_server_name, "www.nection.com.au nection.com.au"
 set :deploy_to, "/home/#{fetch(:user)}/www/#{fetch(:application)}"
 # set :branch, "master"
 set :unicorn_workers, 1
