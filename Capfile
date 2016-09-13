@@ -13,6 +13,7 @@ require 'capistrano/upload-config'
 require 'capistrano/touch-linked-files'
 require 'capistrano/nvm'
 require 'capistrano/npm'
+require 'capistrano/delayed_job'
 
 # Includes tasks from other gems included in your Gemfile
 #
