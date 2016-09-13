@@ -129,10 +129,6 @@ GEM
     capistrano-bundler (1.1.4)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
-    capistrano-delayed-job (1.1.0)
-      capistrano (>= 3.1)
-      daemons (>= 1.1)
-      sshkit (>= 1.2.0)
     capistrano-npm (1.0.2)
       capistrano (>= 3.0.0)
     capistrano-nvm (0.0.6)
@@ -149,6 +145,8 @@ GEM
       capistrano (>= 3.0)
     capistrano-upload-config (0.7.0)
       capistrano (>= 3.0)
+    capistrano3-delayed-job (1.7.2)
+      capistrano (~> 3.0, >= 3.0.0)
     capybara (2.6.2)
       addressable
       mime-types (>= 1.16)
@@ -582,7 +580,6 @@ DEPENDENCIES
   braintree (~> 2.30.0)
   capistrano (= 3.4)
   capistrano-bundler
-  capistrano-delayed-job
   capistrano-npm
   capistrano-nvm
   capistrano-rails
@@ -590,6 +587,7 @@ DEPENDENCIES
   capistrano-rvm
   capistrano-touch-linked-files
   capistrano-upload-config
+  capistrano3-delayed-job (~> 1.0)
   capistrano3-nginx_unicorn!
   capybara (~> 2.6.2)
   coffee-rails (~> 4.0.1)

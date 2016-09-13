@@ -161,7 +161,7 @@ group :development do
   gem 'capistrano-touch-linked-files'
   gem 'capistrano-npm'
   gem 'capistrano-nvm', require: false
-  gem 'capistrano-delayed-job'
+  gem 'capistrano3-delayed-job', '~> 1.0'
 end
 
 group :test do
