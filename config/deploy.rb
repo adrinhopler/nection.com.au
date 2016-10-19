@@ -1,5 +1,5 @@
 # Change these
-server '107.170.18.225', port: 80, roles: [:web, :app, :db], primary: true
+server '107.170.18.225', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com/adrinhopler/nection.com.au.git'
 set :application,     'sharetribe'
