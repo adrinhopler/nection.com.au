@@ -151,10 +151,10 @@ group :development do
   gem 'awesome_print', '~> 1.6.1'
 
   # Deploy with Capistrano
-  gem 'capistrano', '3.4'
-  gem 'capistrano-rails'
-  gem 'capistrano-rvm'
-  gem 'capistrano-bundler'
+  gem 'capistrano', '3.4',   require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-rvm',   require: false
+  gem 'capistrano-bundler',   require: false
   gem 'capistrano3-nginx_unicorn', github: 'jesson/capistrano3-nginx_unicorn'
   gem 'capistrano-rails-collection'
   gem 'capistrano-upload-config'
@@ -162,7 +162,10 @@ group :development do
   gem 'capistrano-npm'
   gem 'capistrano-nvm', require: false
   gem 'capistrano3-delayed-job', '~> 1.0'
+  gem 'capistrano3-puma',   require: false
 end
+
+gem 'puma'
 
 group :test do
   gem 'capybara', '~> 2.6.2'
