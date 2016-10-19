@@ -42,6 +42,7 @@ production:
 
   traity_api_key: '1GvjKtZHRSqkOMMXEDIAXQ'
   traity_secret_key: 'rzZ6OuM1WKYUtgACNsPZc3jS8PMpAZ1XSMOQ'
+  secret_key_base: '7ec2c92cc67d092d9284818f234020834b9fa7d20c5dc00638c57d563a1a21437d4a6428bae678e19c1f3a41fa3c778c79c6ca670de258d71c71ab38f04be388'
 
   # for static landing page (example data)
   clp_static_enabled: true
