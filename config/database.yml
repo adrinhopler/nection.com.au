@@ -3,7 +3,7 @@ development:
     database: sharetribe_development
     encoding: utf8
     username: root
-    password: 
+    password: sharetribesql
     host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -14,7 +14,7 @@ test: &test
     database: sharetribe_test
     encoding: utf8
     username: root
-    password: 
+    password: sharetribesql
     host: localhost
 
 staging:
@@ -22,7 +22,7 @@ staging:
     database: sharetribe_staging
     encoding: utf8
     username: root
-    password: 
+    password: sharetribesql
     host: localhost
     
 production:
@@ -30,7 +30,7 @@ production:
     database: sharetribe_production
     encoding: utf8
     username: root
-    password: 
+    password: sharetribesql
     host: localhost
 
 cucumber:
