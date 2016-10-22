@@ -66,7 +66,7 @@ Kassi::Application.configure do
   config.assets.js_compressor = :uglifier
 
   # Don't fallback to assets pipeline
-  config.assets.compile = false
+  config.assets.compile = true;
 
   # Generate digests for assets URLs
   config.assets.digest = true
